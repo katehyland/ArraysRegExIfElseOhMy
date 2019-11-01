@@ -23,8 +23,6 @@ namespace Arrays_Lab8
             Console.WriteLine("Which student would you like to learn about? (enter a number 1-30)");
             int input = int.Parse(Console.ReadLine());
 
-            //if (validateInput == true)
-            //{ 
             if (Enumerable.Range(1, 10).Contains(input) == true)
             {
                 Console.WriteLine($"Would you like to know {names[0]}'s favorite food or favoirte color? Enter 'food' or 'color'.");
