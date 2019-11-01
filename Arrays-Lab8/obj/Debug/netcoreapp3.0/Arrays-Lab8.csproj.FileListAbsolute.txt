@@ -1,0 +1,11 @@
+/Users/khyland/Documents/GrandCircusProjects/Arrays-Lab8/Arrays-Lab8/bin/Debug/netcoreapp3.0/Arrays-Lab8
+/Users/khyland/Documents/GrandCircusProjects/Arrays-Lab8/Arrays-Lab8/bin/Debug/netcoreapp3.0/Arrays-Lab8.deps.json
+/Users/khyland/Documents/GrandCircusProjects/Arrays-Lab8/Arrays-Lab8/bin/Debug/netcoreapp3.0/Arrays-Lab8.runtimeconfig.json
+/Users/khyland/Documents/GrandCircusProjects/Arrays-Lab8/Arrays-Lab8/bin/Debug/netcoreapp3.0/Arrays-Lab8.runtimeconfig.dev.json
+/Users/khyland/Documents/GrandCircusProjects/Arrays-Lab8/Arrays-Lab8/bin/Debug/netcoreapp3.0/Arrays-Lab8.dll
+/Users/khyland/Documents/GrandCircusProjects/Arrays-Lab8/Arrays-Lab8/bin/Debug/netcoreapp3.0/Arrays-Lab8.pdb
+/Users/khyland/Documents/GrandCircusProjects/Arrays-Lab8/Arrays-Lab8/obj/Debug/netcoreapp3.0/Arrays-Lab8.csprojAssemblyReference.cache
+/Users/khyland/Documents/GrandCircusProjects/Arrays-Lab8/Arrays-Lab8/obj/Debug/netcoreapp3.0/Arrays-Lab8.AssemblyInfoInputs.cache
+/Users/khyland/Documents/GrandCircusProjects/Arrays-Lab8/Arrays-Lab8/obj/Debug/netcoreapp3.0/Arrays-Lab8.AssemblyInfo.cs
+/Users/khyland/Documents/GrandCircusProjects/Arrays-Lab8/Arrays-Lab8/obj/Debug/netcoreapp3.0/Arrays-Lab8.dll
+/Users/khyland/Documents/GrandCircusProjects/Arrays-Lab8/Arrays-Lab8/obj/Debug/netcoreapp3.0/Arrays-Lab8.pdb
