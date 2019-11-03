@@ -12,7 +12,7 @@ namespace Arrays_Lab8
         }
 
         //prompt user to enter a number 1-30
-        static void getStudentInfo()
+        public static void getStudentInfo()
         {
 
             //create 3 arrays for students, foods and colors
@@ -20,75 +20,51 @@ namespace Arrays_Lab8
             string[] foods = { "Pizza", "Burgers", "Tacos" };
             string[] colors = { "Pink", "Blue", "Yellow" };
 
-            Console.WriteLine("Which student would you like to learn about? (enter a number 1-30)");
-            int input = int.Parse(Console.ReadLine());
-
-            if (Enumerable.Range(1, 10).Contains(input) == true)
+            Console.WriteLine("Which student would you like to learn about? (enter a number 1-3)");
+            for (int i = 0; i < names.Length; i++)
             {
-                Console.WriteLine($"Would you like to know {names[0]}'s favorite food or favoirte color? Enter 'food' or 'color'.");
-                string inputString= Console.ReadLine();
-
-                Match food = Regex.Match(inputString, @"\W*((?i)food(?-i))\W*");
-                Match color = Regex.Match(inputString, @"\W*((?i)color(?-i))\W*");
-
-                if (food.Success) {
-                    Console.WriteLine($"{names[0]}'s favorite food is {foods[0]}");
-                    return;
-                }
-
-                if (color.Success)
-                {
-                    Console.WriteLine($"{names[0]}'s favorite color is {colors[0]}");
-                    return;
-                }
-
-                Console.WriteLine("Hmmm...sorry. You must not have typed food or color.");
+                //in order to display this list in a non-array way, we add 1 to index 
+                Console.WriteLine(i + 1 + ":" + names[i]);
             }
-            else if (Enumerable.Range(11, 20).Contains(input) == true)
+            try
             {
-                Console.WriteLine($"Would you like to know {names[1]}'s favorite food or favoirte color? Enter 'food' or 'color'.");
-                string inputString = Console.ReadLine();
+                int numericInput = int.Parse(Console.ReadLine());
+                string selectedStudent = names[numericInput - 1];
 
-                Match food = Regex.Match(inputString, @"\W*((?i)food(?-i))\W*");
-                Match color = Regex.Match(inputString, @"\W*((?i)color(?-i))\W*");
+                Console.WriteLine($"That student is {selectedStudent}. Would you like to know {selectedStudent}'s favorite color or favorite food?");
+                string selectedFact = Console.ReadLine();
 
-                if (food.Success)
+                Match acceptedInput = Regex.Match(selectedFact, @"/^[A-Za-z]+$/");
+
+                if (acceptedInput.Success && selectedFact == "color")
                 {
-                    Console.WriteLine($"{names[1]}'s favorite food is {foods[1]}");
-                    return;
+                    Console.WriteLine($"{selectedStudent}'s favorite color is {colors[numericInput - 1]}");
+
                 }
 
-                if (color.Success)
+                if (acceptedInput.Success && selectedFact == "food")
                 {
-                    Console.WriteLine($"{names[1]}'s favorite color is {colors[1]}");
-                    return;
+                    Console.WriteLine($"{selectedStudent}'s favorite food is {foods[numericInput - 1]}");
                 }
 
-                Console.WriteLine("Hmmm...sorry. You must not have typed food or color.");
+                else
+                {
+                    Console.WriteLine("Input must be 'food' or 'color' ");
+                }
             }
-            else if (input >= 21 && input <= 30)
+            catch (IndexOutOfRangeException)
             {
-                Console.WriteLine($"Would you like to know {names[2]}'s favorite food or favoirte color? Enter 'food' or 'color'.");
-                string inputString = Console.ReadLine();
-
-                Match food = Regex.Match(inputString, @"\W*((?i)food(?-i))\W*");
-                Match color = Regex.Match(inputString, @"\W*((?i)color(?-i))\W*");
-
-                if (food.Success)
-                {
-                    Console.WriteLine($"{names[2]}'s favorite food is {foods[2]}");
-                    return;
-                }
-
-                if (color.Success)
-                {
-                    Console.WriteLine($"{names[2]}'s favorite color is {colors[2]}");
-                    return;
-                }
-
-                Console.WriteLine("Hmmm...sorry. You must not have typed food or color.");
+                Console.WriteLine("INPUT ERROR: You must choose a number between 1-3");
             }
-        Console.WriteLine("Sorry- you must enter a number 1-30!");
+            catch (FormatException)
+            {
+                Console.WriteLine("INPUT ERROR: You must enter a number. No special characters or letters.");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("ERROR: You broke it.");
+            }
+
         }
     }
 }
